@@ -1,0 +1,239 @@
+html {
+  scroll-behavior: smooth;
+}
+header {
+  width: 100%;
+  height: 6.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+header .logo {
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ebebeb;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+}
+
+header .logo a {
+  text-decoration: none;
+  color: #000;
+}
+header .logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+header nav .mobile-btn {
+  position: absolute;
+  right: 3vw;
+  top: 5px;
+  height: 60px;
+}
+
+header nav .mobile-btn span {
+  text-indent: -9999px;
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 10px;
+  transition: 0.3s;
+  position: relative;
+  border-radius: 10px;
+  z-index: 200;
+}
+
+header nav .mobile-btn span::before,
+header nav .mobile-btn span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -6px;
+  background-color: #000;
+  border-radius: 10px;
+  transition: 0.3s;
+  width: 22px;
+  height: 2px;
+}
+
+header nav .mobile-btn span::after {
+  top: 6px;
+  width: 8px;
+}
+header nav .mobile-btn span.active {
+  background-color: #000;
+}
+header nav .mobile-btn span.active::before {
+  background-color: #fff;
+  transform: rotate(45deg);
+  top: 0;
+  width: 25px;
+}
+header nav .mobile-btn span.active::after {
+  background-color: #fff;
+  transform: rotate(-45deg);
+  width: 25px;
+  top: 0;
+}
+
+header nav a {
+  display: grid;
+  place-items: center start;
+  padding-left: 20px;
+}
+
+header nav .global-nav.visible {
+  display: block;
+  transform: translateX(0);
+}
+header nav .global-nav {
+  font-weight: 700;
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 10px;
+  right: 0;
+  width: 65%;
+  list-style: none;
+  padding: 0;
+  border-radius: 20px;
+  height: 60vh;
+  font-size: 2rem;
+  margin: 0;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 50px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+header nav .global-nav li {
+  margin: 30px;
+}
+header nav .global-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 0;
+}
+
+/* section */
+
+section .main {
+  width: 70%;
+  max-width: 300px;
+  margin-left: 2.5rem;
+  height: 62vh;
+  box-sizing: border-box;
+  padding-top: 8rem;
+}
+section .main h2 {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 1.7rem;
+}
+section .main h3 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+section .imgbox {
+  background-color: gold;
+  width: 90%;
+  height: 33vh;
+  border-radius: 20px;
+  margin: 5px auto;
+  position: relative;
+  box-sizing: border-box;
+}
+section .imgbox .cartoon {
+  width: 82%;
+  height: 132%;
+  position: absolute;
+  right: 6vw;
+  top: -10vw;
+  z-index: 1;
+}
+section .imgbox .splash {
+  width: 82%;
+  height: 122%;
+  position: absolute;
+  right: 6vw;
+  top: 2vw;
+}
+section p {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  width: 80%;
+  margin: 150px auto;
+}
+
+/* 스와이퍼 */
+section .mySwiper {
+  width: 90%;
+  height: 33vh;
+  border-radius: 20px;
+}
+section .mySwiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+section .mySwiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+section .mySwiper .swiper-button-prev,
+section .mySwiper .swiper-button-next {
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-indent: -999px;
+}
+
+section .swiper-txt {
+  margin: 20px auto;
+}
+
+/* footer */
+footer {
+  height: 20vh;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 70px;
+}
+footer p {
+  font-size: 0.8rem;
+  color: #858585;
+  margin: 3px auto;
+  font-weight: 500;
+}
+
+.top-btn {
+  background-color: #ffc400;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1.5rem;
+  color: #fff;
+  z-index: 50;
+}
